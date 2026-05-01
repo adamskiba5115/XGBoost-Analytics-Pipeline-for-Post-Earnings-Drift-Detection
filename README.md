@@ -147,6 +147,61 @@ The model assumes execution at Close T+1 or Open T. While this provides a conser
 ### **Regime Sensitivity**
 The model was trained and tested over specific market cycles. Its performance may vary significantly under unprecedented macroeconomic regimes that differ fundamentally from the historical training distribution.
 
+## **Installation and Usage**
+
+> **Note**: The current configuration reflects the optimal model version (**Close T+1 full**). To evaluate different strategy variants, the model horizon parameters must be adjusted manually in the source code.
+- **Prerequisites**
+* Python 3.8 or higher
+* Git
+
+### Setup
+1. **Clone the repository:**
+```bash
+git clone https://github.com/adamskiba5115/XGBoost-Analytics-Pipeline-for-Post-Earnings-Drift-Detection.git
+cd XGBoost-Analytics-Pipeline-for-Post-Earnings-Drift-Detection
+```
+
+2. **Create and activate a virtual environment**
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. **Install required dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+### Execution
+> **Note**: Re-running the hyperparameter optimization is not required for the (**Close T+1 full version**). The model automatically loads the best-performing parameters from src/optimized_params.json.
+```bash
+python run_pipeline.py
+```
+
+### Output
+
+* **Logs**: Terminal output tracks real-time progress across all pipeline stages.
+* **Parameters**: The model utilizes pre-calculated optimal hyperparameters stored in src/optimized_params.json.
+
+## Project Structure
+
+- `run_pipeline.py` — Main entry point to execute the full analytical pipeline.
+- `config.py` — Centralized configuration (paths, database settings, constants).
+- `src/` — Core logic of the application:
+  - `data_ingestion.py` — Automated data retrieval and cleaning.
+  - `feature_engineering.py` — Technical indicators and signal generation.
+  - `optimization.py` — Hyperparameter tuning using Optuna.
+  - `model.py` — XGBoost model training and prediction logic.
+  - `backtest.py` — Strategy performance evaluation.
+  - `optimized_params.json` — Pre-calculated optimal hyperparameters.
+- `results/` — Output folder for performance reports and visualizations.
+- `requirements.txt` — List of necessary Python libraries.
+
 ## Future Work & Research Directions
 This project serves as a foundational framework for systematic equity signal research. Future iterations will focus on increasing the system's robustness and moving toward a production-ready environment:
 
