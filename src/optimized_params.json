@@ -1,0 +1,88 @@
+[
+    {
+        "train": [
+            2021
+        ],
+        "test": 2022,
+        "xgb_params": {
+            "n_estimators": 400,
+            "max_depth": 3,
+            "learning_rate": 0.0802111322404094,
+            "subsample": 0.5243135326914794,
+            "colsample_bytree": 0.5657261731468785,
+            "min_child_weight": 8,
+            "reg_alpha": 0.02811025073514525,
+            "reg_lambda": 0.5124831147225084,
+            "random_state": 42,
+            "n_jobs": -1
+        },
+        "threshold": -0.07401341268039567,
+        "position_size": 0.1415901772993605
+    },
+    {
+        "train": [
+            2021,
+            2022
+        ],
+        "test": 2023,
+        "xgb_params": {
+            "n_estimators": 1000,
+            "max_depth": 6,
+            "learning_rate": 0.019836778695907824,
+            "subsample": 0.8358503422029284,
+            "colsample_bytree": 0.8090641202289479,
+            "min_child_weight": 8,
+            "reg_alpha": 0.002845970334341385,
+            "reg_lambda": 0.48561577077656753,
+            "random_state": 42,
+            "n_jobs": -1
+        },
+        "threshold": -0.0531723069186586,
+        "position_size": 0.12723183917356393
+    },
+    {
+        "train": [
+            2021,
+            2022,
+            2023
+        ],
+        "test": 2024,
+        "xgb_params": {
+            "n_estimators": 300,
+            "max_depth": 7,
+            "learning_rate": 0.010444811291259657,
+            "subsample": 0.5873486533960102,
+            "colsample_bytree": 0.701151286440046,
+            "min_child_weight": 13,
+            "reg_alpha": 0.030045236925163078,
+            "reg_lambda": 1.440346276936386,
+            "random_state": 42,
+            "n_jobs": -1
+        },
+        "threshold": -0.05576552046595685,
+        "position_size": 0.14501104853888508
+    },
+    {
+        "train": [
+            2021,
+            2022,
+            2023,
+            2024
+        ],
+        "test": 2025,
+        "xgb_params": {
+            "n_estimators": 600,
+            "max_depth": 5,
+            "learning_rate": 0.05910533880337588,
+            "subsample": 0.9200079253573636,
+            "colsample_bytree": 0.7068220361757938,
+            "min_child_weight": 16,
+            "reg_alpha": 0.0208880164555798,
+            "reg_lambda": 1.8240172067596194,
+            "random_state": 42,
+            "n_jobs": -1
+        },
+        "threshold": -0.04694077335659364,
+        "position_size": 0.13987376010424998
+    }
+]
